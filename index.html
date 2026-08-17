@@ -1,111 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Together for Her</title>
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Together for Her - Empowering girls and women in Ethiopia.">
+    <title>Together for Her</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Menu Toggle Button -->
-  <nav>
-    <button class="menu-btn" id="menuToggle" aria-label="Toggle Navigation">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </nav>
-
-  <!-- Team Members Overlay -->
-  <div class="team-modal" id="teamModal">
-    <h2>Our Team</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="images/member1.jpg" alt="Team Member">
-        <h3>Team Member</h3>
-      </div>
-      <div class="team-card">
-        <img src="images/member2.jpg" alt="Team Member">
-        <h3>Team Member</h3>
-      </div>
-      <div class="team-card">
-        <img src="images/member3.jpg" alt="Team Member">
-        <h3>Team Member</h3>
-      </div>
+    <!-- Cinematic Intro Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <div id="counter-box">
+                <span id="counter">0</span><span class="symbol">%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <h1 class="intro-title">Together for Her</h1>
+            <p class="intro-sub">Empowering Women & Girls in Ethiopia</p>
+        </div>
     </div>
-  </div>
 
-  <!-- Hero Entry -->
-  <section class="hero">
-    <h1 class="hero-title">TOGETHER FOR HER</h1>
-  </section>
-
-  <!-- Who We Are -->
-  <section class="about-section">
-    <h2 class="section-title">Who We Are</h2>
-    <p>
-      <strong>Together for Her</strong> is a youth-led initiative founded by young people who believe that young people should not only talk about problems in their communities but also take action to create change.
-    </p>
-    <p>
-      We are a group of young people working to raise awareness, mobilize resources, and create meaningful support for girls and women facing difficult circumstances, particularly those affected by obstetric fistula, social stigma, and lack of access to basic needs and opportunities.
-    </p>
-    <p>
-      Our work is driven by a simple belief: every girl and woman deserves dignity, support, and the opportunity to rebuild her life.
-    </p>
-
-    <h3>What We Do</h3>
-    <p>
-      Through Together for Her, we organize youth-led activities, awareness campaigns, fundraising initiatives, community engagement programs, and partnerships with organizations working on women’s and girls’ rights and well-being.
-    </p>
-  </section>
-
-  <!-- Our Impact -->
-  <section>
-    <div class="impact-wrapper">
-      <div class="impact-header">
-        <h2 class="section-title">Our Impact on the Community</h2>
-        <p style="margin-top: 15px; color: #555;">
-          Although Together for Her is a youth-led and growing initiative, our work has already created opportunities for young people to become actively involved in community service and advocacy.
-        </p>
-      </div>
-
-      <div class="impact-grid">
-        <div class="impact-card">
-          <h4>Youth Engagement & Leadership</h4>
-          <ul>
-            <li>Mobilize young people to participate in community-focused initiatives.</li>
-            <li>Create opportunities for youth to use their leadership, creativity, and skills to address community challenges.</li>
-          </ul>
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="logo-text">Together <span class="accent-text">for Her</span></span>
         </div>
+        <button id="menu-toggle" class="menu-btn" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
 
-        <div class="impact-card">
-          <h4>Awareness & Advocacy</h4>
-          <ul>
-            <li>Raise awareness about issues affecting girls and women that are often overlooked.</li>
-            <li>Give visibility to the experiences of women and girls affected by issues such as obstetric fistula and social exclusion.</li>
-          </ul>
-        </div>
-
-        <div class="impact-card">
-          <h4>Partnerships & Mobilization</h4>
-          <ul>
-            <li>Connect with local institutions, organizations, and partners to build collaboration and support.</li>
-            <li>Mobilize resources and in-kind donations for girls and women who need support.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="impact-goal">
-        "Our goal is not simply to organize one event or campaign. We want to build a culture where young people take responsibility for the communities they belong to and work together to create lasting change."
-      </div>
+    <!-- Fullscreen Mobile/Overlay Navigation Menu -->
+    <div id="nav-overlay" class="nav-overlay">
+        <nav class="nav-links">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#what-we-do" class="nav-link">What We Do</a>
+            <a href="#impact" class="nav-link">Our Impact</a>
+            <a href="#team" class="nav-link">Our Team</a>
+        </nav>
     </div>
-  </section>
 
-  <!-- Custom JavaScript -->
-  <script src="js/main.js"></script>
+    <!-- Main Container -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-badge">Youth-Led Initiative</div>
+            <h1 class="hero-heading">Dignity, Support & Hope for Every Girl</h1>
+            <p class="hero-subtext">Our work is driven by a simple belief: every girl and woman deserves dignity, support, and the opportunity to fulfill her potential.</p>
+            <div class="hero-actions">
+                <a href="#what-we-do" class="btn-primary">Explore Our Work</a>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="section">
+            <h2 class="section-title">What We Do</h2>
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Youth-Led Activities</h3>
+                    <p>Organizing youth-led initiatives and awareness campaigns across communities to drive organic change.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Empowerment Programs</h3>
+                    <p>Building targeted fundraising and community engagement programs that support vulnerable girls.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Strategic Partnerships</h3>
+                    <p>Partnering with established organizations focused on women's rights, health, and well-being.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Impact Section -->
+        <section id="impact" class="section">
+            <h2 class="section-title">Our Impact on the Community</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="accent-line"></div>
+                    <h3>Youth Engagement & Leadership</h3>
+                    <ul>
+                        <li>Mobilizing young people to participate in community-focused initiatives.</li>
+                        <li>Creating opportunities for youth to build leadership skills and address social challenges.</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <div class="accent-line"></div>
+                    <h3>Awareness & Advocacy</h3>
+                    <ul>
+                        <li>Raising awareness about critical issues affecting women and girls in Ethiopia.</li>
+                        <li>Giving visibility to health issues like obstetric fistula and social exclusion.</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <div class="accent-line"></div>
+                    <h3>Partnerships & Mobilization</h3>
+                    <ul>
+                        <li>Connecting with local institutions and organizations to build sustainable collaboration.</li>
+                        <li>Mobilizing resources and in-kind support for women facing hardship.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar-ring">
+                        <img src="images/member1.jpg" alt="Team Member 1">
+                    </div>
+                    <h3>Team Member</h3>
+                    <p>Community Lead</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-ring">
+                        <img src="images/member2.jpg" alt="Team Member 2">
+                    </div>
+                    <h3>Team Member</h3>
+                    <p>Program Coordinator</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-ring">
+                        <img src="images/member3.jpg" alt="Team Member 3">
+                    </div>
+                    <h3>Team Member</h3>
+                    <p>Advocacy Director</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

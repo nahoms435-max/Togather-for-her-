@@ -1,14 +1,35 @@
-const menuToggle = document.getElementById('menuToggle');
-const teamModal = document.getElementById('teamModal');
-const menuIcon = menuToggle.querySelector('i');
+document.addEventListener("DOMContentLoaded", () => {
+    const counterElement = document.getElementById("counter");
+    const progressBar = document.getElementById("progress-bar");
+    const introOverlay = document.getElementById("intro-overlay");
+    let count = 0;
 
-menuToggle.addEventListener('click', () => {
-  teamModal.classList.toggle('active');
-  if (teamModal.classList.contains('active')) {
-    menuIcon.classList.remove('fa-bars');
-    menuIcon.classList.add('fa-xmark');
-  } else {
-    menuIcon.classList.remove('fa-xmark');
-    menuIcon.classList.add('fa-bars');
-  }
+    const updateCounter = setInterval(() => {
+        count += 1;
+        if (counterElement) counterElement.textContent = count;
+        if (progressBar) progressBar.style.width = count + "%";
+
+        if (count >= 100) {
+            clearInterval(updateCounter);
+
+            if (typeof gsap !== "undefined") {
+                gsap.to("#intro-overlay", {
+                    duration: 1,
+                    opacity: 0,
+                    y: "-100%",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        introOverlay.style.display = "none";
+                    }
+                });
+            } else if (introOverlay) {
+                introOverlay.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+                introOverlay.style.opacity = "0";
+                introOverlay.style.transform = "translateY(-100%)";
+                setTimeout(() => {
+                    introOverlay.style.display = "none";
+                }, 800);
+            }
+        }
+    }, 15);
 });
