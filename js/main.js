@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const introOverlay = document.getElementById("intro-overlay");
     let count = 0;
 
-    // Counter Interval Animation
     const updateCounter = setInterval(() => {
         count += 1;
         if (counterElement) {
@@ -12,14 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (count >= 100) {
             clearInterval(updateCounter);
-            
-            // Fade out the intro overlay once reaching 100%
+
             if (typeof gsap !== "undefined") {
                 gsap.to("#intro-overlay", {
-                    duration: 1,
+                    duration: 0.8,
                     opacity: 0,
-                    display: "none",
-                    delay: 0.3
+                    onComplete: () => {
+                        introOverlay.style.display = "none";
+                    }
                 });
             } else if (introOverlay) {
                 introOverlay.style.transition = "opacity 0.8s ease";
@@ -29,5 +28,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 800);
             }
         }
-    }, 20); // Adjust duration speed as needed
+    }, 15);
 });

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Together for Her is a youth-led initiative in Ethiopia empowering girls and women facing difficult circumstances, obstetric fistula, and social stigma.">
-    <meta name="keywords" content="Together for Her, Ethiopia youth initiative, women empowerment Ethiopia, obstetric fistula advocacy">
+    <meta name="description" content="Together for Her is a youth-led initiative in Ethiopia empowering girls and women.">
     
     <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="YOUR_ACTUAL_VERIFICATION_CODE_HERE" />
@@ -14,7 +13,7 @@
 </head>
 <body>
 
-    <!-- Intro Overlay Animation -->
+    <!-- Intro Overlay -->
     <div id="intro-overlay">
         <div id="counter-screen">
             <span id="counter">0</span><span class="percent">%</span>
@@ -26,20 +25,27 @@
     </div>
 
     <!-- Main Website Content -->
-    <header class="hero">
-        <div class="hero-brand-container">
-            <img src="images/logo.png" alt="Together for Her Logo" class="main-logo">
-            <span class="hero-tagline">Empowering Girls & Women in Ethiopia</span>
-        </div>
-        <nav>
-            <button class="menu-btn">Menu</button>
-        </nav>
-    </header>
+    <main id="main-content">
+        <header class="hero">
+            <div class="hero-brand-container">
+                <img src="images/logo.png" alt="Together for Her Logo" class="main-logo">
+                <h1 class="hero-title">Together for Her</h1>
+                <p class="hero-tagline">Empowering Girls & Women in Ethiopia</p>
+            </div>
+            <nav>
+                <button class="menu-btn">Menu</button>
+            </nav>
+        </header>
 
-    <!-- GSAP Animation Library CDN (Required for counter and overlay transitions) -->
+        <section class="about-section">
+            <h2>About Our Initiative</h2>
+            <p>Dedicated to supporting and empowering young women across Ethiopia through education, advocacy, and community outreach.</p>
+        </section>
+    </main>
+
+    <!-- GSAP Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    
-    <!-- Main Custom JavaScript -->
+    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
