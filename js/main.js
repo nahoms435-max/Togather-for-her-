@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // --- 1. Intro Loading Screen Animation ---
     const counterElement = document.getElementById("counter");
     const progressBar = document.getElementById("progress-bar");
     const introOverlay = document.getElementById("intro-overlay");
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     y: "-100%",
                     ease: "power3.inOut",
                     onComplete: () => {
-                        introOverlay.style.display = "none";
+                        if (introOverlay) introOverlay.style.display = "none";
                     }
                 });
             } else if (introOverlay) {
@@ -32,4 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }, 15);
+
+    // --- 2. Three Dots Navigation Overlay Controls ---
+    const menuToggle = document.getElementById("menu-toggle");
+    const navOverlay = document.getElementById("nav-overlay");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Toggle overlay active class when 3-dot button is touched/clicked
+    if (menuToggle && navOverlay) {
+        menuToggle.addEventListener("click", () => {
+            navOverlay.classList.toggle("active");
+        });
+    }
+
+    // Automatically close overlay when navigating to a section
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (navOverlay) {
+                navOverlay.classList.remove("active");
+            }
+        });
+    });
 });

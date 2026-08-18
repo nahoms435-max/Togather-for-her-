@@ -89,12 +89,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 8%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(5, 11, 20, 0.8);
+    background: rgba(5, 11, 20, 0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-subtle);
 }
@@ -109,62 +109,81 @@ body {
     color: var(--primary-accent);
 }
 
+.main-logo {
+    max-width: 180px;
+    height: auto;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+}
+
+/* Three Dots Navigation Button */
 .menu-btn {
     background: transparent;
     border: none;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
-    gap: 6px;
-    z-index: 1001;
+    gap: 5px;
+    padding: 10px;
+    z-index: 10001;
 }
 
-.menu-btn .bar {
-    width: 28px;
-    height: 2px;
-    background-color: var(--text-primary);
-    transition: all 0.3s ease;
+.menu-btn .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-accent);
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 0 8px var(--glow-color);
 }
 
-/* Nav Overlay */
+.menu-btn:hover .dot {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Nav Overlay Slide Menu */
 .nav-overlay {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    right: -100%;
+    width: 320px;
     height: 100vh;
-    background: rgba(5, 11, 20, 0.98);
+    background: rgba(5, 11, 20, 0.96);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border-subtle);
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10000;
 }
 
 .nav-overlay.active {
-    opacity: 1;
-    pointer-events: all;
+    right: 0;
 }
 
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
     text-align: center;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .nav-link {
     color: var(--text-primary);
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
     color: var(--primary-accent);
+    transform: translateX(4px);
 }
 
 /* Layout & Sections */
@@ -305,6 +324,16 @@ main {
     border-radius: 16px;
     padding: 32px;
     text-align: center;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 242, 254, 0.4);
 }
 
 .avatar-ring {
@@ -314,6 +343,8 @@ main {
     border-radius: 50%;
     padding: 3px;
     background: linear-gradient(135deg, var(--secondary-accent), var(--primary-accent));
+    box-shadow: 0 0 20px var(--glow-color);
+    flex-shrink: 0;
 }
 
 .avatar-ring img {
@@ -321,25 +352,35 @@ main {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    background-color: var(--bg-main);
 }
 
 .team-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
 }
 
-.team-card p {
+.team-card .role {
     color: var(--primary-accent);
     font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-card .team-bio {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
     .hero-heading { font-size: 2.3rem; }
     .section { padding: 60px 6%; }
-}
-.main-logo {
-    max-width: 180px;
-    height: auto;
-    mix-blend-mode: multiply; /* Blends white backgrounds into darker backgrounds */
-    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+    .nav-overlay { width: 100vw; }
 }
