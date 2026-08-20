@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | Together for Her</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+            <span>Together <span class="accent">for Her</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="impact.html">Impact & Initiatives</a></li>
+            <li><a href="contact.html" class="active">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <section class="section-padding" style="max-width: 800px; margin: 0 auto;">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Want to support our "One pad for one girl" campaign or join the team? Send us a message!</p>
+        </div>
+
+        <div class="glass-card">
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Your Name</label>
+                    <input type="text" required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Your Email</label>
+                    <input type="email" required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Message</label>
+                    <textarea rows="5" required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

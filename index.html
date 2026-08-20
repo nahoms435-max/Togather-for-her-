@@ -3,83 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Together for Her - Empowering girls and women in Ethiopia.">
-    <title>Together for Her</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <title>Together for Her | Empowering Girls Through Action</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="intro-overlay">
-        <div class="intro-content">
-            <div id="counter-box">
-                <span id="counter">0</span><span class="symbol">%</span>
-            </div>
-            <div class="progress-bar-container">
-                <div id="progress-bar"></div>
-            </div>
-            <h1 class="intro-title">Together for Her</h1>
-            <h3 class="intro-sub">Empowering Girls in Ethiopia</h3>
-        </div>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span class="badge">Current Campaign</span>
+        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
     </div>
 
-    <header class="navbar">
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">Together <span class="accent-text">for Her</span></a>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="Together for Her Logo" onerror="this.style.display='none'">
+            <span>Together <span class="accent">for Her</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="impact.html">Impact & Initiatives</a></li>
+            <li><a href="contact.html">Get Involved</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Donate / Join</a>
+        <div class="mobile-toggle">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <div class="hero-tag">Youth-Led Social Initiative</div>
+            <h1>Empowering Every Girl to Reach Her Full Potential.</h1>
+            <p>We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.</p>
+            <div class="hero-buttons">
+                <a href="impact.html" class="btn-primary">Explore Our Impact</a>
+                <a href="team.html" class="btn-secondary">Meet The Leaders</a>
+            </div>
         </div>
-        
-        <button id="menu-toggle" class="menu-btn" aria-label="Toggle Navigation">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </button>
-    </header>
-
-    <div id="nav-overlay" class="nav-overlay">
-        <nav class="nav-links">
-            <a href="team.html" class="nav-link">Team Members</a>
-            <a href="impact.html" class="nav-link">Our Impact on Community</a>
-        </nav>
-    </div>
-
-    <main id="main-content">
-        
-        <section id="hero" class="hero-section">
-            <h1 class="hero-heading">Dignity, Health, Hope</h1>
-            <h3 class="hero-subtext">Empowering Her Today, Building a Better Tomorrow</h3>
-            <div class="hero-actions">
-                <a href="#what-we-do" class="btn-primary">Explore Our Work</a>
-            </div>
-        </section>
-
-        <section id="what-we-do" class="section">
-            <h2 class="section-title">What We Do</h2>
-            <div class="cards-grid">
-                <div class="glass-card">
-                    <div class="card-icon"></div>
-                    <h3>Youth-Led Activities</h3>
-                    <p>Organizing youth-led initiatives and awareness campaigns across communities to drive organic change.</p>
-                </div>
-                <div class="glass-card">
-                    <div class="card-icon"></div>
-                    <h3>Empowerment Programs</h3>
-                    <p>Building targeted fundraising and community engagement programs that support vulnerable girls.</p>
-                </div>
-                <div class="glass-card">
-                    <div class="card-icon"></div>
-                    <h3>Strategic Partnerships</h3>
-                    <p>Partnering with established organizations focused on women's rights, health, and well-being.</p>
+        <div>
+            <div class="glass-card" style="text-align:center; padding: 40px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--accent-gold);">Featured Movement</h3>
+                <p style="color: var(--text-muted); margin-bottom:25px;">No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.</p>
+                <div style="background: rgba(255, 59, 112, 0.15); padding: 20px; border-radius: 12px; border: 1px dashed var(--primary);">
+                    <h2 style="color: var(--primary);">"One Pad for One Girl"</h2>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Live Statistics Counter -->
+    <section class="stats-banner">
+        <div>
+            <div class="stat-number counter" data-target="1500">0</div>
+            <div class="stat-label">Pads Distributed</div>
+        </div>
+        <div>
+            <div class="stat-number counter" data-target="450">0</div>
+            <div class="stat-label">Girls Supported</div>
+        </div>
+        <div>
+            <div class="stat-number counter" data-target="12">0</div>
+            <div class="stat-label">School Outreach Events</div>
+        </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Core Pillars -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2>Our Core Objectives</h2>
+            <p>How we bring tangible change to high school girls and young women.</p>
+        </div>
+        <div class="cards-grid">
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">01. Hygiene Dignity</h3>
+                <p style="color: var(--text-muted);">Supplying safe, sustainable menstrual hygiene products to girls in need across local schools and clubs.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">02. Educational Advocacy</h3>
+                <p style="color: var(--text-muted);">Conducting workshops to de-stigmatize menstrual health and empower girls with reproductive knowledge.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">03. Youth Leadership</h3>
+                <p style="color: var(--text-muted);">Fostering youth-led community programs that empower young women to become leaders and changemakers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="margin-bottom: 15px;">Together for Her</h3>
+                <p style="color: var(--text-muted); width: 80%;">A youth-driven initiative committed to creating equity and empowerment for girls.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <ul style="list-style: none; margin-top: 10px; line-height: 2;">
+                    <li><a href="index.html" style="color: var(--text-muted); text-decoration:none;">Home</a></li>
+                    <li><a href="team.html" style="color: var(--text-muted); text-decoration:none;">Team</a></li>
+                    <li><a href="impact.html" style="color: var(--text-muted); text-decoration:none;">Impact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p style="color: var(--text-muted); margin-top: 10px;">Email: contact@togetherforher.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Together for Her. All Rights Reserved.
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

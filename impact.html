@@ -3,67 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our Impact on the Community - Together for Her.">
-    <title>Our Impact - Together for Her</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <title>Impact & Initiatives | Together for Her</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo-container">
-            <a href="index.html" class="logo-text">Together <span class="accent-text">for Her</span></a>
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+            <span>Together <span class="accent">for Her</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="impact.html" class="active">Impact & Initiatives</a></li>
+            <li><a href="contact.html">Get Involved</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Support Us</a>
+    </nav>
+
+    <section class="section-padding">
+        <div class="section-title">
+            <h2>Our Community Work</h2>
+            <p>See how our outreach programs make an immediate impact on youth.</p>
         </div>
-        
-        <button id="menu-toggle" class="menu-btn" aria-label="Toggle Navigation">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </button>
-    </header>
 
-    <div id="nav-overlay" class="nav-overlay">
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="team.html" class="nav-link">Team Members</a>
-        </nav>
-    </div>
-
-    <main id="main-content">
-        <section id="impact" class="section">
-            <h2 class="section-title">Our Impact on the Community</h2>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="accent-line"></div>
-                    <h3>Youth Engagement and Leadership</h3>
-                    <ul>
-                        <li>Mobilizing young people to participate in community-focused initiatives.</li>
-                        <li>Creating opportunities for youth to build leadership skills and address social challenges.</li>
-                    </ul>
-                </div>
-                <div class="impact-card">
-                    <div class="accent-line"></div>
-                    <h3>Awareness & Advocacy</h3>
-                    <ul>
-                        <li>Raising awareness about critical issues affecting women and girls in Ethiopia.</li>
-                        <li>Giving visibility to health issues like obstetric fistula and social exclusion.</li>
-                    </ul>
-                </div>
-                <div class="impact-card">
-                    <div class="accent-line"></div>
-                    <h3>Partnerships & Mobilization</h3>
-                    <ul>
-                        <li>Connecting with local institutions and organizations to build sustainable collaboration.</li>
-                        <li>Mobilizing resources and in-kind support for women facing hardship.</li>
-                    </ul>
-                </div>
+        <div class="cards-grid">
+            <div class="glass-card">
+                <h3 style="color: var(--primary);">Distribution Campaigns</h3>
+                <p style="margin-top: 10px; color: var(--text-muted);">Organizing sanitary pad packages for students so they never miss school days during their cycles.</p>
             </div>
-        </section>
-    </main>
+            <div class="glass-card">
+                <h3 style="color: var(--primary);">School Education Seminars</h3>
+                <p style="margin-top: 10px; color: var(--text-muted);">Hosting peer-led sessions to educate students on health, self-care, and personal confidence.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="color: var(--primary);">Club Collaboration</h3>
+                <p style="margin-top: 10px; color: var(--text-muted);">Partnering with youth clubs such as Uplift Girls Club to build a strong network of support.</p>
+            </div>
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
 </body>
