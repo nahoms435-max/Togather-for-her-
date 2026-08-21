@@ -3,80 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Together for Her | Empowering Every Girl</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Together for Her</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* TOP ANNOUNCEMENT BANNER */
+        .top-banner {
+            background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #0e1017;
+            padding: 16px 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .nav-logo {
+            height: 38px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .brand-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .brand-text i {
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ec4899;
+        }
+
+        /* BUTTONS */
+        .btn-gradient {
+            background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+            transition: transform 0.1s ease, opacity 0.2s ease;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 10% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 40%);
+            padding: 80px 32px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .sub-heading {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* FEATURED CARD */
+        .featured-card {
+            background-color: #121520;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-title {
+            color: #f59e0b;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .card-text {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .card-badge {
+            border: 1px dashed rgba(236, 72, 153, 0.5);
+            background-color: rgba(236, 72, 153, 0.05);
+            color: #ec4899;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* OBJECTIVES SECTION */
+        .objectives-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 32px 100px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            margin-bottom: 36px;
+            font-size: 1rem;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .objective-card {
+            background: #121520;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .objective-num {
+            color: #ec4899;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .objective-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
+        .objective-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="top-banner">
+        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
     </div>
 
-    <!-- Navigation -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="brand-logo">
-            <img src="images/logo.png" alt="Together for Her Logo">
-            <span>Together <i>for Her</i></span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="impact.html">Impact and Initiatives</a></li>
-            <li><a href="contact.html">Get Involved</a></li>
-        </ul>
-        <a href="contact.html" class="btn-primary">Donate / Join</a>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo" onerror="this.style.display='none'">
+                <span class="brand-text">Together <i>for Her</i></span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="impact.html">Impact and Initiatives</a></li>
+                <li><a href="contact.html">Get Involved</a></li>
+            </ul>
+
+            <a href="contact.html" class="btn-gradient">Donate / Join</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <span class="sub-tag">Youth-Led Social Initiative</span>
-            <h1>Empowering Every Girl to Reach Her Full Potential.</h1>
-            <p>We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.</p>
-            <div style="display: flex; gap: 15px; margin-top: 25px;">
-                <a href="contact.html" class="btn-primary">Support Our Cause</a>
-                <a href="impact.html" class="btn-secondary">Explore Our Work</a>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <div class="hero-left">
+                <span class="sub-heading">Youth-Led Social Initiative</span>
+                <h1 class="hero-title">Empowering Every Girl to Reach Her Full Potential.</h1>
+                <p class="hero-description">
+                    We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn-gradient">Support Our Cause</a>
+                    <a href="impact.html" class="btn-outline">Explore Our Work</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-card glass-card">
-            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">Featured Movement</h2>
-            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
-                No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.
-            </p>
-            <div style="padding: 15px; border: 1px dashed var(--primary); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--primary);">"One Pad for One Girl"</h3>
-            </div>
-        </div>
-    </header>
 
-    <!-- Core Objectives Section -->
-    <section class="section-padding">
-        <div class="section-title">
-            <h2>Our Objectives</h2>
-            <p>How we bring tangible change to high school girls and young women.</p>
-        </div>
-        <div class="cards-grid">
-            <div class="glass-card">
-                <h3 style="margin-bottom: 10px; color: var(--primary);">01. Hygiene Dignity</h3>
-                <p style="color: var(--text-muted);">Supplying safe, sustainable menstrual hygiene products to girls in need across local schools and communities.</p>
+            <div class="hero-right">
+                <div class="featured-card">
+                    <h3 class="card-title">Featured Movement</h3>
+                    <p class="card-text">
+                        No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.
+                    </p>
+                    <div class="card-badge">
+                        "One Pad for One Girl"
+                    </div>
+                </div>
             </div>
-            <div class="glass-card">
-                <h3 style="margin-bottom: 10px; color: var(--primary);">02. Educational Advocacy</h3>
-                <p style="color: var(--text-muted);">Conducting workshops to de-stigmatize menstrual health and empower girls with reproductive knowledge.</p>
-            </div>
-            <div class="glass-card">
-                <h3 style="margin-bottom: 10px; color: var(--primary);">03. Youth Leadership</h3>
-                <p style="color: var(--text-muted);">Fostering youth-led community programs that empower young women to become leaders and changemakers.</p>
-            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
-    </footer>
+    <!-- OUR OBJECTIVES SECTION -->
+    <section class="objectives-section">
+        <h2 class="section-title">Our Objectives</h2>
+        <p class="section-subtitle">How we bring tangible change to high school girls and young women.</p>
+
+        <div class="objectives-grid">
+            <div class="objective-card">
+                <span class="objective-num">01</span>
+                <h3>Hygiene Dignity</h3>
+                <p>Providing essential menstrual hygiene products to girls in need across local schools and communities.</p>
+            </div>
+
+            <div class="objective-card">
+                <span class="objective-num">02</span>
+                <h3>Educational Advocacy</h3>
+                <p>Conducting workshops to de-stigmatize menstrual health and empower girls with reproductive knowledge.</p>
+            </div>
+
+            <div class="objective-card">
+                <span class="objective-num">03</span>
+                <h3>Youth Leadership</h3>
+                <p>Fostering youth-led community programs that empower young women to become leaders and changemakers.</p>
+            </div>
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
 </body>
