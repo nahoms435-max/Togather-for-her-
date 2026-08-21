@@ -3,67 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Together for Her</title>
+    <title>Together for Her | Empowering Every Girl</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- TOP ANNOUNCEMENT BANNER -->
-    <div class="top-banner">
-        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand">
-                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
-                <span class="brand-text">Together <i>for Her</i></span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="impact.html">Impact and Initiatives</a></li>
-                <li><a href="contact.html">Get Involved</a></li>
-            </ul>
-
-            <a href="contact.html" class="btn-gradient nav-btn">Donate / Join</a>
-        </div>
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="Together for Her Logo">
+            <span>Together <i>for Her</i></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="impact.html">Impact and Initiatives</a></li>
+            <li><a href="contact.html">Get Involved</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Donate / Join</a>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-container">
-            
-            <!-- LEFT CONTENT -->
-            <div class="hero-left">
-                <span class="sub-heading">Youth-Led Social Initiative</span>
-                <h1 class="hero-title">Empowering Every Girl to Reach Her Full Potential.</h1>
-                <p class="hero-description">
-                    We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.
-                </p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn-gradient">Support Our Cause</a>
-                    <a href="impact.html" class="btn-outline">Explore Our Work</a>
-                </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="sub-tag">Youth-Led Social Initiative</span>
+            <h1>Empowering Every Girl to Reach Her Full Potential.</h1>
+            <p>We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.</p>
+            <div style="display: flex; gap: 15px; margin-top: 25px;">
+                <a href="contact.html" class="btn-primary">Support Our Cause</a>
+                <a href="impact.html" class="btn-secondary">Explore Our Work</a>
             </div>
-
-            <!-- RIGHT FEATURED CARD -->
-            <div class="hero-right">
-                <div class="featured-card">
-                    <h3 class="card-title">Featured Movement</h3>
-                    <p class="card-text">
-                        No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.
-                    </p>
-                    <div class="card-badge">
-                        "One Pad for One Girl"
-                    </div>
-                </div>
+        </div>
+        <div class="hero-card glass-card">
+            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">Featured Movement</h2>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.
+            </p>
+            <div style="padding: 15px; border: 1px dashed var(--primary); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--primary);">"One Pad for One Girl"</h3>
             </div>
+        </div>
+    </header>
 
+    <!-- Core Objectives Section -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2>Our Objectives</h2>
+            <p>How we bring tangible change to high school girls and young women.</p>
+        </div>
+        <div class="cards-grid">
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">01. Hygiene Dignity</h3>
+                <p style="color: var(--text-muted);">Supplying safe, sustainable menstrual hygiene products to girls in need across local schools and communities.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">02. Educational Advocacy</h3>
+                <p style="color: var(--text-muted);">Conducting workshops to de-stigmatize menstrual health and empower girls with reproductive knowledge.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 10px; color: var(--primary);">03. Youth Leadership</h3>
+                <p style="color: var(--text-muted);">Fostering youth-led community programs that empower young women to become leaders and changemakers.</p>
+            </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
