@@ -3,79 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Together for Her | Empowering Girls</title>
+    <title>Together for Her</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="top-banner">
+        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Together for Her Logo">
+            <a href="/" class="brand">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="nav-logo">
+                <span class="brand-text">Together <i>for Her</i></span>
             </a>
+            
             <ul class="nav-links">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="/impact">Impact</a></li>
-                <li><a href="/team">Team</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/impact">Impact and Initiatives</a></li>
                 <li><a href="/contact">Get Involved</a></li>
             </ul>
+
+            <a href="/contact" class="btn-gradient nav-btn">Donate / Join</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="hero-content">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Together for Her Logo" class="hero-logo">
-            <h1>Together for Her</h1>
-            <p class="tagline">"One pad for one girl" — Support Menstrual Hygiene Equity Today!</p>
-            <a href="#get-involved" class="cta-btn">Get Involved</a>
-        </div>
-    </header>
-
-    <!-- GET INVOLVED / CONTACT SECTION -->
-    <section id="get-involved" class="section-container">
-        <div class="form-container">
-            <div class="form-header">
-                <h2>Get Involved</h2>
-                <p>If you'd like to join our team, donate, or share an idea, send us an email below. We read every message!</p>
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- LEFT CONTENT -->
+            <div class="hero-left">
+                <span class="sub-heading">Youth-Led Social Initiative</span>
+                <h1 class="hero-title">Empowering Every Girl to Reach Her Full Potential.</h1>
+                <p class="hero-description">
+                    We provide essential resources, advocate for menstrual health awareness, and break socio-economic barriers facing young women in our communities.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/contact" class="btn-gradient">Support Our Cause</a>
+                    <a href="/impact" class="btn-outline">Explore Our Work</a>
+                </div>
             </div>
 
-            <form action="/contact" method="POST">
-                <div>
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <!-- RIGHT FEATURED CARD -->
+            <div class="hero-right">
+                <div class="featured-card">
+                    <h3 class="card-title">Featured Movement</h3>
+                    <p class="card-text">
+                        No girl should miss out on education due to lack of sanitary products. Join our active distribution drive.
+                    </p>
+                    <div class="card-badge">
+                        "One Pad for One Girl"
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email">
-                </div>
-
-                <div>
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Us an Email</button>
-
-                <!-- FLASHED SUCCESS / ERROR MESSAGE -->
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class="status-message {{ category }}">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-            </form>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Together for Her. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
