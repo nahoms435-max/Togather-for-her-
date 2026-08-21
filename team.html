@@ -5,40 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team | Together for Her</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="top-banner">
-        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
     </div>
 
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand">
-                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
-                <span class="brand-text">Together <i>for Her</i></span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="team.html" class="active">Our Team</a></li>
-                <li><a href="impact.html">Impact and Initiatives</a></li>
-                <li><a href="contact.html">Get Involved</a></li>
-            </ul>
-
-            <a href="contact.html" class="btn-gradient">Donate / Join</a>
-        </div>
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="Together for Her Logo">
+            <span>Together <i>for Her</i></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html" class="active">Our Team</a></li>
+            <li><a href="impact.html">Impact and Initiatives</a></li>
+            <li><a href="contact.html">Get Involved</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Donate / Join</a>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-container" style="grid-template-columns: 1fr;">
-            <div>
-                <span class="sub-heading">Leadership</span>
-                <h1 class="hero-title">Meet the Team</h1>
-                <p class="hero-description">Dedicated individuals working together to drive change and reach young women across communities.</p>
+    <!-- Team Section -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2>Meet Our Team</h2>
+            <p>The dedicated youth driving positive change in our community.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="glass-card" style="text-align: center;">
+                <img src="images/member1.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
+                <h3>Team Lead</h3>
+                <p style="color: var(--text-muted); margin-top: 5px;">Initiative Coordinator</p>
+            </div>
+            <div class="glass-card" style="text-align: center;">
+                <img src="images/member2.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
+                <h3>Outreach Director</h3>
+                <p style="color: var(--text-muted); margin-top: 5px;">Community Engagement</p>
+            </div>
+            <div class="glass-card" style="text-align: center;">
+                <img src="images/member3.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
+                <h3>Operations Lead</h3>
+                <p style="color: var(--text-muted); margin-top: 5px;">Logistics and Distribution</p>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

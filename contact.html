@@ -5,57 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Involved | Together for Her</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="top-banner">
-        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
     </div>
 
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand">
-                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
-                <span class="brand-text">Together <i>for Her</i></span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="impact.html">Impact and Initiatives</a></li>
-                <li><a href="contact.html" class="active">Get Involved</a></li>
-            </ul>
-
-            <a href="contact.html" class="btn-gradient">Donate / Join</a>
-        </div>
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="Together for Her Logo">
+            <span>Together <i>for Her</i></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="impact.html">Impact and Initiatives</a></li>
+            <li><a href="contact.html" class="active">Get Involved</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Donate / Join</a>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-container" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-            <div class="featured-card">
-                <h1 class="hero-title" style="font-size: 2rem; margin-bottom: 12px;">Get Involved</h1>
-                <p class="card-text">
-                    If you'd like to join our team, donate, or share an idea, send us a message below. We read every inquiry!
-                </p>
+    <!-- Contact Section -->
+    <section class="section-padding" style="max-width: 800px; margin: 40px auto;">
+        <div class="section-title">
+            <h2>We'd Love to Hear From You</h2>
+            <p>Whether you want to stand behind "One pad for one girl", jump in with our team, or simply share an idea, send us an email below. We read every message!</p>
+        </div>
 
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div>
-                        <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Your Name</label>
-                        <input type="text" name="name" placeholder="Enter your name" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0b0c10; color: #fff;">
-                    </div>
-                    <div>
-                        <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Your Email</label>
-                        <input type="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0b0c10; color: #fff;">
-                    </div>
-                    <div>
-                        <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Your Message</label>
-                        <textarea name="message" rows="5" placeholder="Write your message..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #0b0c10; color: #fff;"></textarea>
-                    </div>
-                    <button type="submit" class="btn-gradient" style="border: none; cursor: pointer; width: 100%; margin-top: 8px;">Send Message</button>
-                </form>
-            </div>
+        <div class="glass-card">
+            <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will get back to you soon.');">
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Your Name</label>
+                    <input type="text" placeholder="Enter your full name" required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Your Email</label>
+                    <input type="email" placeholder="you@example.com" required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--text-muted);">Your Message</label>
+                    <textarea rows="5" placeholder="Tell us how you'd like to get involved or what's on your mind..." required style="width:100%; padding: 12px; background: rgba(255,255,255,0.05); border:1px solid var(--bg-card-border); border-radius: 8px; color: #FFF; font-family: inherit;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; cursor: pointer;">Send Us an Email</button>
+            </form>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
