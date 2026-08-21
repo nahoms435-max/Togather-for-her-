@@ -4,62 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team | Together for Her</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0b0c10; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
+        .top-banner { background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%); color: #ffffff; text-align: center; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; }
+        .navbar { background-color: #0e1017; padding: 16px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #ffffff; }
+        .nav-logo { height: 38px; width: auto; max-width: 150px; object-fit: contain; border-radius: 6px; }
+        .brand-text { font-size: 1.25rem; font-weight: 700; }
+        .brand-text i { font-style: italic; font-weight: 300; }
+        .nav-links { display: flex; list-style: none; gap: 28px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .nav-links a:hover, .nav-links a.active { color: #ec4899; }
+        .btn-gradient { background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%); color: #ffffff; text-decoration: none; padding: 10px 22px; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; display: inline-block; }
+        .hero-section { padding: 80px 32px; max-width: 1200px; margin: 0 auto; }
+        .hero-title { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
+        .sub-heading { color: #cbd5e1; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px; }
+        .hero-description { color: #94a3b8; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-bottom: 40px; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .team-card { background: #121520; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 24px; text-align: center; }
+        .team-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 2px solid #ec4899; }
+        .team-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+        .team-role { color: #ec4899; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; display: block; }
+        .team-bio { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+    </style>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
-    </div>
+    <div class="top-banner">"One pad for one girl" — Support Menstrual Hygiene Equity Today!</div>
 
-    <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="brand-logo">
-            <img src="images/logo.png" alt="Together for Her Logo">
-            <span>Together <i>for Her</i></span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html" class="active">Our Team</a></li>
-            <li><a href="impact.html">Impact and Initiatives</a></li>
-            <li><a href="contact.html">Get Involved</a></li>
-        </ul>
-        <a href="contact.html" class="btn-primary">Donate / Join</a>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
+                <span class="brand-text">Together <i>for Her</i></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html" class="active">Our Team</a></li>
+                <li><a href="impact.html">Impact and Initiatives</a></li>
+                <li><a href="contact.html">Get Involved</a></li>
+            </ul>
+            <a href="contact.html" class="btn-gradient">Donate / Join</a>
+        </div>
     </nav>
 
-    <!-- Team Section -->
-    <section class="section-padding">
-        <div class="section-title">
-            <h2>Meet Our Team</h2>
-            <p>The dedicated youth driving positive change in our community.</p>
-        </div>
+    <section class="hero-section">
+        <span class="sub-heading">Leadership</span>
+        <h1 class="hero-title">Meet Our Team</h1>
+        <p class="hero-description">Passionate youth leaders working together to ensure every young girl has access to education and menstrual hygiene products.</p>
 
-        <div class="cards-grid">
-            <div class="glass-card" style="text-align: center;">
-                <img src="images/member1.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
-                <h3>Team Lead</h3>
-                <p style="color: var(--text-muted); margin-top: 5px;">Initiative Coordinator</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="images/member1.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/120'">
+                <h3 class="team-name">Co-Founder</h3>
+                <span class="team-role">Executive Director</span>
+                <p class="team-bio">Leading outreach initiatives and managing partnerships to drive sustainable impact.</p>
             </div>
-            <div class="glass-card" style="text-align: center;">
-                <img src="images/member2.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
-                <h3>Outreach Director</h3>
-                <p style="color: var(--text-muted); margin-top: 5px;">Community Engagement</p>
+            <div class="team-card">
+                <img src="images/member2.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/120'">
+                <h3 class="team-name">Co-Founder</h3>
+                <span class="team-role">Program Operations</span>
+                <p class="team-bio">Overseeing community distribution drives and educational workshop logistics.</p>
             </div>
-            <div class="glass-card" style="text-align: center;">
-                <img src="images/member3.jpg" alt="Team Member" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary);">
-                <h3>Operations Lead</h3>
-                <p style="color: var(--text-muted); margin-top: 5px;">Logistics and Distribution</p>
+            <div class="team-card">
+                <img src="images/member3.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/120'">
+                <h3 class="team-name">Team Lead</h3>
+                <span class="team-role">Outreach Coordinator</span>
+                <p class="team-bio">Connecting with local schools to coordinate pad donations and student engagement.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
