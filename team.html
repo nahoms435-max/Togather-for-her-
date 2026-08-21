@@ -3,50 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team | Together for Her</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Our Team | Together for Her</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <div class="top-banner">
+        "One pad for one girl" — Support Menstrual Hygiene Equity Today!
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Together for Her Logo">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
+                <span class="brand-text">Together <i>for Her</i></span>
             </a>
+            
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/impact">Impact</a></li>
-                <li><a href="/team" class="active">Team</a></li>
-                <li><a href="/contact">Get Involved</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html" class="active">Our Team</a></li>
+                <li><a href="impact.html">Impact and Initiatives</a></li>
+                <li><a href="contact.html">Get Involved</a></li>
             </ul>
+
+            <a href="contact.html" class="btn-gradient">Donate / Join</a>
         </div>
     </nav>
 
-    <!-- TEAM CONTENT -->
-    <main class="page-container">
-        <header class="page-header">
-            <h1>Our Leadership Team</h1>
-            <p>Meet the co-founders leading the initiative for menstrual health equity.</p>
-        </header>
-
-        <section class="team-grid">
-            <div class="team-card">
-                <img src="{{ url_for('static', filename='images/member1.jpg') }}" alt="Co-Founder Member 1" class="member-img">
-                <h3>Co-Founder</h3>
-                <p>Co-Founder & Director</p>
+    <section class="hero-section">
+        <div class="hero-container" style="grid-template-columns: 1fr;">
+            <div>
+                <span class="sub-heading">Leadership</span>
+                <h1 class="hero-title">Meet the Team</h1>
+                <p class="hero-description">Dedicated individuals working together to drive change and reach young women across communities.</p>
             </div>
-            <div class="team-card">
-                <img src="{{ url_for('static', filename='images/member2.jpg') }}" alt="Co-Founder Member 2" class="member-img">
-                <h3>Co-Founder</h3>
-                <p>Co-Founder & Outreach Lead</p>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Together for Her. All rights reserved.</p>
-    </footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
