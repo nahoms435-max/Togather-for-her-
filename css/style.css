@@ -1,3 +1,159 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #090a0f;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image constraints */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0f111a;
+    border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ec4899;
+}
+
+/* Main Layout & Sections */
+.page-container, .section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    flex: 1;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at center, #1a102f 0%, #090a0f 100%);
+}
+
+.hero-logo {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+/* Grid Components (Impact & Team) */
+.stats-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.stat-card, .team-card {
+    background-color: #0f111a;
+    border: 1px solid rgba(236, 72, 153, 0.2);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #ec4899;
+    margin-bottom: 8px;
+}
+
+.member-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 2px solid #a855f7;
+}
+
+/* Form Component */
 .form-container {
     width: 100%;
     max-width: 480px;
@@ -7,6 +163,22 @@
     padding: 32px 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 form {
@@ -39,7 +211,7 @@ textarea {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    box-sizing: border-box;
+    font-family: inherit;
 }
 
 input[type="text"]:focus,
@@ -76,7 +248,7 @@ textarea {
     transform: scale(0.98);
 }
 
-/* Success & Error Text Styling */
+/* Status Flash Messages */
 .status-message {
     margin-top: 12px;
     padding: 12px 16px;
@@ -97,6 +269,16 @@ textarea {
     color: #f87171;
     background-color: rgba(248, 113, 113, 0.1);
     border: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #0f111a;
+    color: #64748b;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(236, 72, 153, 0.1);
+    margin-top: auto;
 }
 
 @keyframes fadeIn {

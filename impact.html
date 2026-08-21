@@ -3,60 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact and Initiatives | Together for Her</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Our Impact | Together for Her</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <span>"One pad for one girl" — Support Menstrual Hygiene Equity Today!</span>
-    </div>
-
-    <!-- Navigation -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="brand-logo">
-            <img src="images/logo.png" alt="Together for Her Logo">
-            <span>Together <i>for Her</i></span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="impact.html" class="active">Impact and Initiatives</a></li>
-            <li><a href="contact.html">Get Involved</a></li>
-        </ul>
-        <a href="contact.html" class="btn-primary">Donate / Join</a>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Together for Her Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impact" class="active">Impact</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/contact">Get Involved</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Impact Header -->
-    <section class="section-padding">
-        <div class="section-title">
-            <h2>Impact and Initiatives</h2>
-            <p>Creating lasting social progress through focused action and support.</p>
-        </div>
-        
-        <div class="cards-grid">
-            <div class="glass-card">
-                <h3 style="color: var(--accent-gold); margin-bottom: 12px;">"One Pad for One Girl" Drive</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Direct distribution of essential hygiene kits to local school communities to ensure uninterrupted education for girls.</p>
-            </div>
-            <div class="glass-card">
-                <h3 style="color: var(--accent-gold); margin-bottom: 12px;">Workshops and Awareness</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Interactive, open dialogue sessions focused on body positivity, health management, and breaking societal taboos.</p>
-            </div>
-            <div class="glass-card">
-                <h3 style="color: var(--accent-gold); margin-bottom: 12px;">Community Mentorship</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Connecting young students with mentors to support their educational goals and leadership skills.</p>
-            </div>
-        </div>
-    </section>
+    <!-- IMPACT CONTENT -->
+    <main class="page-container">
+        <header class="page-header">
+            <h1>Our Impact</h1>
+            <p>Empowering young women by expanding access to essential menstrual hygiene resources.</p>
+        </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Together for Her. Empowering communities, one girl at a time.</p>
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>1,000+</h3>
+                <p>Pads Distributed</p>
+            </div>
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Girls Supported</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Community Driven</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Together for Her. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
 </body>
 </html>
