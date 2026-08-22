@@ -6,26 +6,168 @@
     <title>Impact & Initiatives | Together for Her</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #0b0c10; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
-        .top-banner { background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%); color: #ffffff; text-align: center; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; }
-        .navbar { background-color: #0e1017; padding: 16px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #ffffff; }
-        .nav-logo { height: 38px; width: auto; max-width: 150px; object-fit: contain; border-radius: 6px; }
-        .brand-text { font-size: 1.25rem; font-weight: 700; }
-        .brand-text i { font-style: italic; font-weight: 300; }
-        .nav-links { display: flex; list-style: none; gap: 28px; }
-        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
-        .nav-links a:hover, .nav-links a.active { color: #ec4899; }
-        .btn-gradient { background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%); color: #ffffff; text-decoration: none; padding: 10px 22px; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; display: inline-block; }
-        .hero-section { padding: 80px 32px; max-width: 1200px; margin: 0 auto; }
-        .hero-title { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
-        .sub-heading { color: #cbd5e1; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px; }
-        .hero-description { color: #94a3b8; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-bottom: 40px; }
-        .impact-list { display: grid; gap: 24px; }
-        .impact-card { background: #121520; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px; }
-        .impact-card h3 { color: #ec4899; font-size: 1.3rem; margin-bottom: 10px; }
-        .impact-card p { color: #94a3b8; line-height: 1.6; font-size: 0.95rem; }
+        img { max-width: 100%; height: auto; }
+
+        body { 
+            background-color: #08090d; 
+            color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            min-height: 100vh; 
+        }
+
+        .top-banner { 
+            background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%); 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 8px 12px; 
+            font-size: 0.85rem; 
+            font-weight: 500; 
+        }
+
+        .navbar { 
+            background-color: #0e1017; 
+            padding: 16px 32px; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+
+        .nav-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            text-decoration: none; 
+            color: #ffffff; 
+        }
+
+        .nav-logo { 
+            height: 40px !important; 
+            max-height: 40px !important;
+            width: auto !important; 
+            max-width: 150px !important; 
+            object-fit: contain; 
+            border-radius: 6px; 
+        }
+
+        .brand-text { 
+            font-size: 1.25rem; 
+            font-weight: 700; 
+        }
+
+        .brand-text i { 
+            font-style: italic; 
+            font-weight: 300; 
+        }
+
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 28px; 
+        }
+
+        .nav-links a { 
+            color: #94a3b8; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            transition: color 0.2s ease; 
+        }
+
+        .nav-links a:hover, 
+        .nav-links a.active { 
+            color: #ec4899; 
+        }
+
+        .btn-nav { 
+            background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%); 
+            color: #ffffff; 
+            text-decoration: none; 
+            padding: 10px 22px; 
+            border-radius: 9999px; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            display: inline-block; 
+        }
+
+        /* OBJECTIVES-STYLE GRID LAYOUT */
+        .hero-section { 
+            padding: 80px 32px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .sub-heading { 
+            color: #94a3b8; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            display: block; 
+            margin-bottom: 12px; 
+            font-weight: 600;
+        }
+
+        .hero-title { 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            margin-bottom: 12px; 
+            color: #ffffff;
+        }
+
+        .hero-description { 
+            color: #94a3b8; 
+            font-size: 1.05rem; 
+            line-height: 1.6; 
+            max-width: 600px; 
+            margin-bottom: 48px; 
+        }
+
+        .impact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+        }
+
+        .impact-card { 
+            background-color: #11131c; 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border-radius: 16px; 
+            padding: 32px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .impact-card:hover {
+            border-color: rgba(236, 72, 153, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .card-number {
+            color: #ec4899;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .impact-card h3 { 
+            color: #ffffff; 
+            font-size: 1.35rem; 
+            font-weight: 700;
+            margin-bottom: 14px; 
+        }
+
+        .impact-card p { 
+            color: #94a3b8; 
+            line-height: 1.6; 
+            font-size: 0.95rem; 
+        }
     </style>
 </head>
 <body>
@@ -35,7 +177,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand">
-                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo">
+                <img src="images/logo.png" alt="Together for Her Logo" class="nav-logo" onerror="this.style.display='none'">
                 <span class="brand-text">Together <i>for Her</i></span>
             </a>
             <ul class="nav-links">
@@ -44,25 +186,30 @@
                 <li><a href="impact.html" class="active">Impact and Initiatives</a></li>
                 <li><a href="contact.html">Get Involved</a></li>
             </ul>
-            <a href="contact.html" class="btn-gradient">Donate / Join</a>
+            <a href="contact.html" class="btn-nav">Donate / Join</a>
         </div>
     </nav>
 
     <section class="hero-section">
-        <span class="sub-heading">Our Work</span>
+        <span class="sub-heading">OUR WORK</span>
         <h1 class="hero-title">Impact and Initiatives</h1>
         <p class="hero-description">Creating lasting social progress through focused action, distribution drives, and youth mentorship.</p>
 
-        <div class="impact-list">
+        <div class="impact-grid">
             <div class="impact-card">
+                <span class="card-number">01</span>
                 <h3>"One Pad for One Girl" Drive</h3>
                 <p>Direct distribution of essential hygiene kits to local school communities to ensure uninterrupted education for girls.</p>
             </div>
+
             <div class="impact-card">
+                <span class="card-number">02</span>
                 <h3>Workshops and Awareness</h3>
                 <p>Interactive, open dialogue sessions focused on body positivity, health management, and breaking societal taboos.</p>
             </div>
+
             <div class="impact-card">
+                <span class="card-number">03</span>
                 <h3>Community Mentorship</h3>
                 <p>Connecting young students with mentors to support their educational goals and leadership skills.</p>
             </div>
